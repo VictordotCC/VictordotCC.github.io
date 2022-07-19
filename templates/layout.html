@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1.0, shrink-to-fit=1">
+    
+    <!-- Bootstrap imports-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    
+
+    <!-- Custom Css and Scripts Here!-->
+        <link rel="stylesheet" href="static/styles.css" type="text/css">
+    <!-- 
+        <link href=/static/icon.png" rel="icon">
+    -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+
+    <title>Ruido Ambiental App: {% block title %}{% endblock %}</title>
+
+</head>
+
+<body>
+    <div class= "informacion">
+        <div class="flex-item"><img class= "pe-1 pb-1" width = "20" height = "20" src="static/cell.svg"></div>
+        <div class="flex-item pe-4"><a href="tel:(+562)28910250" style="color: #413e3e; text-decoration-line: none;"><b>(+56 2) 2891 0250</b></a></div>
+        <div class="flex-item"><img class= "pe-1 pb-1" width = "20" height = "20" src="static/mail.svg"></div>
+        <div class="flex-item"><a href="mail:contacto@ruidoambiental.cl" style="color: #413e3e; text-decoration-line: none;"><b>contacto@ruidoambiental.cl</b></a></div>
+
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fw-bold" style="margin-left: 18%">
+        <a class="navbar-brand pt-3 pe-5" href="http://www.ruidoambiental.cl" target="_blank"><img src="/static/logohome.jpg" width="250" height="56" alt="Ruidoambiental.cl"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item pe-5">   {% if current_page != "HOME"%}
+                                        <a class="nav-link text-dark un" href="/">HOME</a></li>
+                                        {%else%}
+                                        <a class="nav-link text-dark underline" href="/">HOME</a></li>
+                                        {%endif%}
+                <li class="nav-item pe-5">   {% if current_page != "VIVO"%}
+                                            <a class="nav-link text-dark un" href="/envivo">EN VIVO</a></li>
+                                        {%else%}
+                                        <a class="nav-link text-dark underline" href="/envivo">EN VIVO</a></li>
+                                        {%endif%}
+                <li class="nav-item pe-5">   {% if current_page != "PREDICCION"%}
+                                            <a class="nav-link text-dark un" href="/prediccion_de_ruido">PREDICCIÓN DE RUIDO</a></li>
+                                        {%else%}
+                                        <a class="nav-link text-dark underline" href="/prediccion_de_ruido">PREDICCIÓN DE RUIDO</a></li>
+                                        {%endif%}
+                <li class="nav-item pe-5">   {% if current_page != "PERFIL"%}
+                                            <a class="nav-link text-dark un" href="/">PERFIL</a></li>
+                                        {%else%}
+                                        <a class="nav-link text-dark underline" href="/">PERFIL</a></li>
+                                        {%endif%}
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
+
+    <script src="/static/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+</body>
+
+<!-- Icon by <a href="https://freeicons.io/profile/722">Fasil</a> on <a href="https://freeicons.io">freeicons.io</a> -->
