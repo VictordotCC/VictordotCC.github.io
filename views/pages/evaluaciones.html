@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es_CL">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ruido Ambiental: Resumen Evaluaciones</title>
+    </head>
+    <body>
+        <div id="contenido">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Evaluaci&oacute;n</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha T&eacute;rmino</th>
+                        <th>Mapa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>Los Ángeles</td>
+                    <td>Evaluación 1</td>
+                    <td>01/01/2015</td>
+                    <td>01/01/2016</td>
+                    <td>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalMapa" onclick="verMapa();">Ver</button>
+                    </td>
+                </tbody>
+            </table>
+            <script src="scripts/evaluaciones.js"></script>
+        
+
+            <!-- Modal Mapas-->
+            <div class="modal fade" id="modalMapa" tabindex="-1" role="dialog" aria-labelledby="modalMapaLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalMapaLabel">Mapa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id = "info" class="modal-body">
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

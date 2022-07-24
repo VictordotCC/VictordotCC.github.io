@@ -65,3 +65,7 @@
 .navbar-toggler:focus {
   box-shadow: 0 0 0 0.25rem rgba(6, 9, 56, 1) !important;
 }
+
+/*.table {
+  --bs-table-hover-bg: rgba(6, 9, 46, 1);
+}*/
