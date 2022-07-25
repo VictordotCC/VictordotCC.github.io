@@ -10,7 +10,7 @@ matplotlib.use('Agg')
 
 
 def make_geojson():
-    df = pd.read_excel('Ejemplo.xlsx')
+    df = pd.read_excel('Ejemplo2.xlsx')
 
     eastings = df['UTM Este'].tolist()
     northings = df['UTM Norte'].tolist()
@@ -40,7 +40,7 @@ def make_geojson():
     
     geojson= geojsoncontour.contourf_to_geojson(contourf= contourf, ndigits=5, unit='dB')
 
-    with open('geojson.geojson', 'w') as f:
+    with open('geojson3.geojson', 'w') as f:
         f.write(geojson)
         
 

@@ -10,6 +10,7 @@
     background-color: #E2E2E2;
 }
 
+
 .notselected {
     display: inline-block;
     padding-bottom:2px;
@@ -69,3 +70,33 @@
 /*.table {
   --bs-table-hover-bg: rgba(6, 9, 46, 1);
 }*/
+
+#map {
+  height: calc(100vh - 100px);
+}
+
+#console {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  flex-wrap: wrap;
+}
+
+#slider {
+  width: 100%;
+}
+
+.row {
+  height: 12px;
+  width: 100%;
+}
+
+.legend{
+  width: 50%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background: linear-gradient(to right,#2b83ba, #abdda4, #ffffbf, #fdae61, #d7191c)
+}
